@@ -36,3 +36,9 @@ textarea {
 .sidebar h2 {
     margin-top: 5px;
 }
+
+#separation {
+    height: 1px;
+    background-color: grey;
+    max-width: 75%;
+}
