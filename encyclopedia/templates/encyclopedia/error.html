@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block body %}
-    <h1 style="margin-bottom: 15px;">Sorry, the article {{name}} doesn't exist</h1>
-    <label style="padding-left: 10px;">You can either create it </label>
-    <a href="{% url 'new' %}">here</a>
+    <h1 style="margin-bottom: 15px;">Sorry, the article {{name}} already exists.</h1>
+    <label style="padding-left: 10px;">You can visit it </label>
+    <a href="{% url "art" title=name %}">here</a>
     <label> or return to the </label>
     <a href="{% url 'index' %}">home page.</a>
 {% endblock %}

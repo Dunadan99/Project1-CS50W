@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create new entry 
+{% endblock %}
+
+{% block body %}
+    <h1>Create new entry</h1>
+    <div class="separation"></div>
+
+    <form action="{% url 'new' %}" method="POST" class="form">
+        {% csrf_token %}
+        <label for="artTitle">Enter the article title: </label>
+        <input type="text" name="artTitle" id="artTitle" class="text" required>
+
+        <div class="aligment">
+            <label for="artBody">Enter the article body: </label>
+            <textarea name="artBody" id="artBody" cols="5" rows="5" class="textA" required></textarea>
+            <input type="submit" name="createEntry" id="createEntry" value="Create" class="button">
+        </div>
+    </form>
+
+{% endblock %}

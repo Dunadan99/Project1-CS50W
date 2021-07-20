@@ -6,4 +6,12 @@
 
 {% block body %}
     {{article | safe}}
+    <div class="editButton">
+        <form action="{% url 'edit' %}" method="POST" >
+            {% csrf_token %}
+            <input type="hidden" name="artTitle" id="artTitle" value="{{name}}">
+            <input type="hidden" name="source" id="source" value="article">
+            <input type="submit" value="Edit this article">
+        </form>
+    </div>
 {% endblock %}
